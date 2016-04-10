@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.40121.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogImporter", "CatalogImporter.csproj", "{BF77C877-61D5-4199-8271-EAE429C39553}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlToJson", "..\XmlToJson\XmlToJson.csproj", "{3416AA80-A153-42F6-9972-DA9E6F8ACA41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BF77C877-61D5-4199-8271-EAE429C39553}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF77C877-61D5-4199-8271-EAE429C39553}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF77C877-61D5-4199-8271-EAE429C39553}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3416AA80-A153-42F6-9972-DA9E6F8ACA41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3416AA80-A153-42F6-9972-DA9E6F8ACA41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3416AA80-A153-42F6-9972-DA9E6F8ACA41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3416AA80-A153-42F6-9972-DA9E6F8ACA41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
