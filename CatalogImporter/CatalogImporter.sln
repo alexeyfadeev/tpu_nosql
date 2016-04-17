@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurnameImporter", "..\Surna
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PurchaseGenerator", "..\PurchaseGenerator\PurchaseGenerator.csproj", "{C3BDAD75-4832-495C-A199-71BF2270D8D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsmImporter", "..\OsmImporter\OsmImporter.csproj", "{9E1D622F-F1B0-4AD7-9521-51C93DECB876}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug - Mono Strict|Any CPU = Debug - Mono Strict|Any CPU
@@ -58,6 +60,12 @@ Global
 		{C3BDAD75-4832-495C-A199-71BF2270D8D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3BDAD75-4832-495C-A199-71BF2270D8D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3BDAD75-4832-495C-A199-71BF2270D8D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E1D622F-F1B0-4AD7-9521-51C93DECB876}.Debug - Mono Strict|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E1D622F-F1B0-4AD7-9521-51C93DECB876}.Debug - Mono Strict|Any CPU.Build.0 = Debug|Any CPU
+		{9E1D622F-F1B0-4AD7-9521-51C93DECB876}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E1D622F-F1B0-4AD7-9521-51C93DECB876}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E1D622F-F1B0-4AD7-9521-51C93DECB876}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E1D622F-F1B0-4AD7-9521-51C93DECB876}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
