@@ -46,14 +46,8 @@ namespace Tpu.NoSql.CatalogImporter
 
                         if (buffer.Count >= portionSize)
                         {
-                            //try
-                            {
-                                context.Offer.ExecuteFastInsert<NoSql.Sql.Offer>(buffer);
-                                buffer.Clear();
-                            }
-                            //catch (Exception e)
-                            {
-                            }
+                            context.Offer.ExecuteFastInsert<NoSql.Sql.Offer>(buffer);
+                            buffer.Clear();
                         }
                     }
 
@@ -61,9 +55,6 @@ namespace Tpu.NoSql.CatalogImporter
                     {
                         context.Offer.ExecuteFastInsert<NoSql.Sql.Offer>(buffer);
                     }
-                    
-                    //context.Offer.InsertAllOnSubmit(offerEntities);
-                    //context.SubmitChanges();
                 }
             }
         }

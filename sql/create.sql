@@ -18,7 +18,7 @@ CREATE TABLE customer
 (
     id serial PRIMARY KEY NOT NULL,
 	name text NOT NULL,
-	birth timestamp NOT NULL
+	birth date NOT NULL
 );
 
 CREATE TABLE purchase
