@@ -36,6 +36,10 @@ namespace Tpu.NoSql.CatalogImporter
         {
             set
             {
+                if (value is long)
+                {
+                    BarCode = (long)value;
+                }
                 if (value is JArray)
                 {
                     var list = ((JArray)value).ToObject<List<long>>();

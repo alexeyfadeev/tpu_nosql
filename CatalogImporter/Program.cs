@@ -12,7 +12,7 @@ namespace Tpu.NoSql.CatalogImporter
     {
         static void Main(string[] args)
         {
-            var files = new string[] { "div_beauty_offers.json", "div_bs_offers.json", "div_food_offers.json", "mobile_offers.json" };
+            var files = new string[] { "div_food_offers.json", "div_bs_offers.json", "mobile_offers.json", "div_beauty_offers.json" };
 
             using (var context = new NoSql.Sql.TestContext("Server=192.168.0.103;Port=5432;Database=test;User Id=alexey;Password=fktrc;DbLinqProvider=PostgreSql;DbLinqConnectionType=Npgsql.NpgsqlConnection, Npgsql"))
             {
@@ -38,11 +38,6 @@ namespace Tpu.NoSql.CatalogImporter
                     foreach (var item in offerEntities)
                     {
                         buffer.Add(item);
-
-                        if (item.ID == 28994227)
-                        {
-                            string sql = item.InsertSql;
-                        }
 
                         if (buffer.Count >= portionSize)
                         {

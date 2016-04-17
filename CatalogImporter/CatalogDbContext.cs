@@ -5,7 +5,7 @@
 // | |_| | |_) | |  | |  __/ || (_| | |
 // |____/|_.__/|_|  |_|\___|\__\__,_|_|
 //
-// Auto-generated from test on 2016-04-16 21:05:15Z.
+// Auto-generated from test on 2016-04-17 18:59:15Z.
 // Please visit http://code.google.com/p/dblinq2007/ for more information.
 //
 namespace Tpu.NoSql.Sql
@@ -150,7 +150,7 @@ namespace Tpu.NoSql.Sql
 			this.OnCreated();
 		}
 		
-		[Column(Storage="_birth", Name="birth", DbType="timestamp without time zone", AutoSync=AutoSync.Never, CanBeNull=false)]
+		[Column(Storage="_birth", Name="birth", DbType="date", AutoSync=AutoSync.Never, CanBeNull=false)]
 		[DebuggerNonUserCode()]
 		public System.DateTime Birth
 		{
@@ -284,7 +284,7 @@ namespace Tpu.NoSql.Sql
 		
 		private System.Collections.Generic.Dictionary<string, string> _parameters;
 		
-		private double _price;
+		private decimal _price;
 		
 		private string _vendor;
 		
@@ -321,7 +321,7 @@ namespace Tpu.NoSql.Sql
 		
 		partial void OnPriceChanged();
 		
-		partial void OnPriceChanging(double value);
+		partial void OnPriceChanging(decimal value);
 		
 		partial void OnVendorChanged();
 		
@@ -484,9 +484,9 @@ namespace Tpu.NoSql.Sql
 			}
 		}
 		
-		[Column(Storage="_price", Name="price", DbType="double precision", AutoSync=AutoSync.Never, CanBeNull=false)]
+		[Column(Storage="_price", Name="price", DbType="numeric(10,2)", AutoSync=AutoSync.Never, CanBeNull=false)]
 		[DebuggerNonUserCode()]
-		public double Price
+		public decimal Price
 		{
 			get
 			{
@@ -628,6 +628,8 @@ namespace Tpu.NoSql.Sql
 		
 		private int[] _offers;
 		
+		private decimal _total;
+		
 		#region Extensibility Method Declarations
 		partial void OnCreated();
 		
@@ -646,6 +648,10 @@ namespace Tpu.NoSql.Sql
 		partial void OnOffersChanged();
 		
 		partial void OnOffersChanging(int[] value);
+		
+		partial void OnTotalChanged();
+		
+		partial void OnTotalChanging(decimal value);
 		#endregion
 		
 		
@@ -739,6 +745,27 @@ namespace Tpu.NoSql.Sql
 			}
 		}
 		
+		[Column(Storage="_total", Name="total", DbType="numeric(10,2)", AutoSync=AutoSync.Never, CanBeNull=false)]
+		[DebuggerNonUserCode()]
+		public decimal Total
+		{
+			get
+			{
+				return this._total;
+			}
+			set
+			{
+				if ((_total != value))
+				{
+					this.OnTotalChanging(value);
+					this.SendPropertyChanging();
+					this._total = value;
+					this.SendPropertyChanged("Total");
+					this.OnTotalChanged();
+				}
+			}
+		}
+		
 		public string InsertSql
 		{
 			get
@@ -756,13 +783,15 @@ namespace Tpu.NoSql.Sql
 				if ((this.Offers != null))
 				{
 					insertString = (insertString + "\'");
-					insertString = (insertString + this.Offers.ToString().Replace("\'", "\'\'"));
+					insertString = (insertString + this.Offers.ToArrayString().Replace("\'", "\'\'"));
 					insertString = (insertString + "\'");
 				}
 				else
 				{
 					insertString = (insertString + "null");
 				}
+				insertString = (insertString + ", ");
+				insertString = (insertString + this.Total.ToString().Replace(',', '.'));
 				insertString = (insertString + ")");
 				return insertString;
 			}

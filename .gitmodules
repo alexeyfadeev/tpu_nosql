@@ -1,0 +1,3 @@
+[submodule "DbLinq"]
+	path = DbLinq
+	url = https://github.com/alexeyfadeev/dblinq2007.git

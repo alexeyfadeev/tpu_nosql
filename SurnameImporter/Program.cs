@@ -5,7 +5,7 @@ using System.Text;
 using System.IO;
 using Tpu.NoSql.Sql;
 
-namespace SurnameImporter
+namespace Tpu.NoSql.SurnameImporter
 {
     class Program
     {
@@ -39,6 +39,7 @@ namespace SurnameImporter
 
             using (var context = new TestContext("Server=192.168.0.103;Port=5432;Database=test;User Id=alexey;Password=fktrc;DbLinqProvider=PostgreSql;DbLinqConnectionType=Npgsql.NpgsqlConnection, Npgsql"))
             {
+                if (context.Customer.Any()) return;
                 context.Customer.ExecuteFastInsert<Customer>(customers);
             }
         }
