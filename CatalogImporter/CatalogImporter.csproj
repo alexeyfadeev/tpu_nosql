@@ -67,11 +67,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\dblinq2007\src\DbLinq.PostgreSql\DbLinq.PostgreSql.csproj">
+    <ProjectReference Include="..\DbLinq\src\DbLinq.PostgreSql\DbLinq.PostgreSql.csproj">
       <Project>{32824f7e-9260-413c-b174-f3e315936fa7}</Project>
       <Name>DbLinq.PostgreSql</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\dblinq2007\src\DbLinq\DbLinq.csproj">
+    <ProjectReference Include="..\DbLinq\src\DbLinq\DbLinq.csproj">
       <Project>{7950197d-4122-49cb-9fd7-45e666bafec2}</Project>
       <Name>DbLinq</Name>
     </ProjectReference>

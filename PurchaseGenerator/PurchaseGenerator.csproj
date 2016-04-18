@@ -36,10 +36,10 @@
       <HintPath>..\CatalogImporter\packages\Dapper.1.50.0-beta9\lib\net45\Dapper.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Security">
-      <HintPath>..\..\lib\Mono.Security.dll</HintPath>
+      <HintPath>..\lib\Mono.Security.dll</HintPath>
     </Reference>
     <Reference Include="Npgsql">
-      <HintPath>..\..\lib\Npgsql.dll</HintPath>
+      <HintPath>..\lib\Npgsql.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -60,11 +60,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\dblinq2007\src\DbLinq.PostgreSql\DbLinq.PostgreSql.csproj">
+    <ProjectReference Include="..\DbLinq\src\DbLinq.PostgreSql\DbLinq.PostgreSql.csproj">
       <Project>{32824f7e-9260-413c-b174-f3e315936fa7}</Project>
       <Name>DbLinq.PostgreSql</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\dblinq2007\src\DbLinq\DbLinq.csproj">
+    <ProjectReference Include="..\DbLinq\src\DbLinq\DbLinq.csproj">
       <Project>{7950197d-4122-49cb-9fd7-45e666bafec2}</Project>
       <Name>DbLinq</Name>
     </ProjectReference>
